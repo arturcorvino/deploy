@@ -1,0 +1,7 @@
+## Ignorar todos arquivos da pasta conf
+conf/*
+
+## NÃO Ignorar esses arquivos da pasta conf
+!*/
+!conf/sample.conf
+!conf/geral.conf
