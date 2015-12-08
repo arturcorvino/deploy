@@ -7,10 +7,7 @@ echo "----------------------------------------------------------------------";
 echo "                         Processo de deploy                           ";
 echo "----------------------------------------------------------------------";
 
-echo "Projetos disponíveis para deploy: ";
-echo "-> app.prevencao";
-echo "-> site.prevencao";
-echo "Digite abaixo um dos projetos";
+echo "Informe o projeto que deseja fazer deploy: ";
 
 read projeto;
 
