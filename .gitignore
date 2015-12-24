@@ -1,5 +1,6 @@
 ## Ignorar todos arquivos da pasta conf
 conf/*
+apps/*
 
 ## NÃO Ignorar esses arquivos da pasta conf
 !*/

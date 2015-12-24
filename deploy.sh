@@ -6,19 +6,19 @@ creator_config () {
 	echo "----------------------------------------------------------------------";
 	echo "Informe o ssh do servidor (Ex: user@servidor): ";
 	read ssh_config;
-	echo 'ssh="'$ssh_config'"' >> conf/$project".conf";
+	echo 'ssh="'$ssh_config'"' >> apps/$project".conf";
 
 	echo "Informe o caminho remoto projeto ( Ex: /var/www/projeto/app): ";
 	read path_config;
-	echo 'path_remote="'$path_config'"' >> conf/$project".conf";
+	echo 'path_remote="'$path_config'"' >> apps/$project".conf";
 	
 	echo "Informe a branch de desenvolvimento ( Ex: develop): ";
 	read branch_dev_config;
-	echo 'branch_dev="'$branch_dev_config'"' >> conf/$project".conf";
+	echo 'branch_dev="'$branch_dev_config'"' >> apps/$project".conf";
 	
 	echo "Informe a branch de estavel ( Ex: master): ";
 	read branch_prod_config;
-	echo 'branch_prod="'$branch_prod_config'"' >> conf/$project".conf";
+	echo 'branch_prod="'$branch_prod_config'"' >> apps/$project".conf";
 }
 
 # Lendo configurações gerais
@@ -35,7 +35,7 @@ echo "----------------------------------------------------------------------";
 echo "                     Lendo arquivo de configuração                    ";
 
 # Verifica se existe o arquivo de configuração, se não tiver, ele pergunta se quer criar
-if [ ! -e conf/$project.conf ] ; then
+if [ ! -e apps/$project.conf ] ; then
 	echo "Arquivo de configuração não existe. Vamos criar? [s]im / [n]ão";
 
 	read confirmation;
@@ -57,7 +57,7 @@ if [ ! -e conf/$project.conf ] ; then
 fi
 
 # Adicionando variaveis de configuração no shell
-. conf/$project.conf
+. apps/$project.conf
 
 # Acessando a pasta do projeto
 cd $path_projects/$project;
