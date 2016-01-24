@@ -138,12 +138,12 @@ rm -r $path_deploy/$project/$new_version
 echo "----------------------------------------------------------------------";
 echo "                     Copiando para o servidor                         ";
 
-#scp $path_deploy/$project/$new_version.zip $ssh:$path_remote/app.zip
+scp $path_deploy/$project/$new_version.zip $ssh:$path_remote/app.zip
 
 echo "----------------------------------------------------------------------";
 echo "                    Acessando e aplicando deploy                      ";
 
-#ssh $ssh "cd $path_remote ; unzip -o app.zip ; rm app.zip ; xargs rm -fv < deletados.txt ; mv versao.txt webroot/versao.txt ; chmod 777 tmp/ webroot/versao.txt ; find tmp -type f -delete";
+ssh $ssh "cd $path_remote ; unzip -o app.zip ; rm app.zip ; xargs rm -fv < deletados.txt ; mv versao.txt webroot/versao.txt ; chmod 777 tmp/ webroot/versao.txt ; find tmp -type f -delete";
 
 echo "======================================================================";
 echo "        Publicação da versão $new_version realizada com sucesso!      ";

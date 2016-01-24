@@ -5,4 +5,5 @@ apps/*
 ## NÃO Ignorar esses arquivos da pasta conf
 !*/
 !conf/sample.conf
-!conf/geral.conf
+!conf/general.conf
+!apps/empty
